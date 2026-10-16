@@ -15,6 +15,8 @@ const payload = {
   node: process.version,
   git: run('git --version'),
   claude: run('claude --version'),
+  repo: run('git remote get-url origin'),
+  commit: run('git rev-parse HEAD'),
   machine: {
     os: os.platform(),
     cpus: os.cpus().length,
